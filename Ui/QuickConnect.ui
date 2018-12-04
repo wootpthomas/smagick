@@ -1,0 +1,422 @@
+<ui version="4.0" >
+ <class>QuickConnect</class>
+ <widget class="QDialog" name="QuickConnect" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>344</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Quick Connect</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="../icons.qrc" >:/icons/icon.svg</iconset>
+  </property>
+  <property name="modal" >
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QGridLayout" >
+     <item row="0" column="0" >
+      <widget class="QLabel" name="label" >
+       <property name="text" >
+        <string>&amp;Host Address:</string>
+       </property>
+       <property name="buddy" >
+        <cstring>m_hostAddress</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2" >
+      <widget class="QComboBox" name="m_hostAddress" >
+       <property name="editable" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" >
+      <widget class="QLabel" name="label_4" >
+       <property name="text" >
+        <string>P&amp;ort:</string>
+       </property>
+       <property name="buddy" >
+        <cstring>m_hostPort</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" >
+      <widget class="QSpinBox" name="m_hostPort" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize" >
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximum" >
+        <number>65535</number>
+       </property>
+       <property name="value" >
+        <number>22</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" >
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="0" >
+      <widget class="QLabel" name="label_2" >
+       <property name="text" >
+        <string>&amp;Username:</string>
+       </property>
+       <property name="buddy" >
+        <cstring>m_username</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="2" >
+      <widget class="QComboBox" name="m_username" >
+       <property name="editable" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" >
+      <widget class="QLabel" name="label_3" >
+       <property name="text" >
+        <string>&amp;Password:</string>
+       </property>
+       <property name="buddy" >
+        <cstring>m_password</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2" >
+      <widget class="QLineEdit" name="m_password" >
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="echoMode" >
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QCheckBox" name="m_saveThisConnection" >
+       <property name="text" >
+        <string>&amp;Save this connection</string>
+       </property>
+       <property name="checked" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_advancedOptionsGroupBox" >
+     <property name="title" >
+      <string>Advanced Options</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <item>
+       <widget class="QGroupBox" name="m_x11Forwarding" >
+        <property name="enabled" >
+         <bool>false</bool>
+        </property>
+        <property name="toolTip" >
+         <string>This feature is not yet implemented</string>
+        </property>
+        <property name="title" >
+         <string>&amp;X11 Forwarding</string>
+        </property>
+        <property name="checkable" >
+         <bool>true</bool>
+        </property>
+        <property name="checked" >
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="label_5" >
+           <property name="text" >
+            <string>Xorg &amp;Display Number:</string>
+           </property>
+           <property name="buddy" >
+            <cstring>m_x11DisplayNumber</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="m_x11DisplayNumber" />
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>51</width>
+             <height>21</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="m_tunneling" >
+        <property name="toolTip" >
+         <string>This is an EXPERIMENTAL feature and may not work correctly</string>
+        </property>
+        <property name="title" >
+         <string>SSH &amp;Tunneling</string>
+        </property>
+        <property name="checkable" >
+         <bool>true</bool>
+        </property>
+        <property name="checked" >
+         <bool>false</bool>
+        </property>
+        <layout class="QVBoxLayout" >
+         <item>
+          <layout class="QHBoxLayout" >
+           <item>
+            <widget class="QPushButton" name="m_addTunnel" >
+             <property name="text" >
+              <string>&amp;Add</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="m_editTunnel" >
+             <property name="text" >
+              <string>&amp;Edit</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer>
+             <property name="orientation" >
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" >
+              <size>
+               <width>16</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="m_deleteTunnel" >
+             <property name="text" >
+              <string>&amp;Delete</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QListWidget" name="m_tunnelList" >
+           <property name="minimumSize" >
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+           <item>
+            <property name="text" >
+             <string>Localhost port 3388 to 192.168.5.101 port 3389</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="QCheckBox" name="m_doNotStartTerminal" >
+          <property name="enabled" >
+           <bool>false</bool>
+          </property>
+          <property name="toolTip" >
+           <string>This feature is not yet implemented</string>
+          </property>
+          <property name="text" >
+           <string>Do not start a terminal</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>91</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QPushButton" name="m_moreOptions" >
+       <property name="text" >
+        <string>&amp;More Options...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>51</width>
+         <height>25</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_connect" >
+       <property name="text" >
+        <string>&amp;Connect</string>
+       </property>
+       <property name="default" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_cancel" >
+       <property name="text" >
+        <string>C&amp;ancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>m_hostAddress</tabstop>
+  <tabstop>m_hostPort</tabstop>
+  <tabstop>m_username</tabstop>
+  <tabstop>m_password</tabstop>
+  <tabstop>m_saveThisConnection</tabstop>
+  <tabstop>m_moreOptions</tabstop>
+  <tabstop>m_x11Forwarding</tabstop>
+  <tabstop>m_tunneling</tabstop>
+  <tabstop>m_addTunnel</tabstop>
+  <tabstop>m_editTunnel</tabstop>
+  <tabstop>m_deleteTunnel</tabstop>
+  <tabstop>m_tunnelList</tabstop>
+  <tabstop>m_doNotStartTerminal</tabstop>
+  <tabstop>m_connect</tabstop>
+  <tabstop>m_cancel</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../icons.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>m_password</sender>
+   <signal>returnPressed()</signal>
+   <receiver>QuickConnect</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>259</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>368</x>
+     <y>95</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_connect</sender>
+   <signal>clicked()</signal>
+   <receiver>QuickConnect</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>226</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>226</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>QuickConnect</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>308</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>304</x>
+     <y>446</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

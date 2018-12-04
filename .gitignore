@@ -1,0 +1,7 @@
+Generated/*
+install/*
+buildUtils/*
+win32/autoBuild
+win32/Debug*
+win32/Release*
+win32/sMagick Install/*

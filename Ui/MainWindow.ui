@@ -1,0 +1,178 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>702</width>
+    <height>477</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Shell Magic</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="../icons.qrc" >
+    <normaloff>:/icons/icon.svg</normaloff>:/icons/icon.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>22</y>
+     <width>702</width>
+     <height>434</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>702</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Connection_Manager" />
+    <addaction name="actionChange_Master_Password" />
+    <addaction name="separator" />
+    <addaction name="action_Quick_Connect" />
+    <addaction name="separator" />
+    <addaction name="action_Exit" />
+   </widget>
+   <widget class="QMenu" name="menuHelp" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_About" />
+    <addaction name="actionAbout_Qt" />
+   </widget>
+   <widget class="QMenu" name="menuEdit" >
+    <property name="title" >
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionCopy" />
+    <addaction name="action_Paste" />
+    <addaction name="separator" />
+    <addaction name="action_Preferences" />
+   </widget>
+   <widget class="QMenu" name="menuStored_Connections" >
+    <property name="enabled" >
+     <bool>false</bool>
+    </property>
+    <property name="title" >
+     <string>&amp;Connect To</string>
+    </property>
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuEdit" />
+   <addaction name="menuStored_Connections" />
+   <addaction name="menuHelp" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>456</y>
+     <width>702</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="action_Connection_Manager" >
+   <property name="icon" >
+    <iconset resource="../icons.qrc" >
+     <normaloff>:/icons/pencil_go.png</normaloff>:/icons/pencil_go.png</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Connection Manager ...</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Shift+M</string>
+   </property>
+  </action>
+  <action name="action_Exit" >
+   <property name="icon" >
+    <iconset resource="../icons.qrc" >
+     <normaloff>:/icons/cross.png</normaloff>:/icons/cross.png</iconset>
+   </property>
+   <property name="text" >
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="action_About" >
+   <property name="text" >
+    <string>&amp;About Shell Magic...</string>
+   </property>
+  </action>
+  <action name="actionChange_Master_Password" >
+   <property name="text" >
+    <string>Change Master Password...</string>
+   </property>
+  </action>
+  <action name="actionConsoleTest" >
+   <property name="text" >
+    <string>Console &amp;Test</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt" >
+   <property name="text" >
+    <string>About Qt...</string>
+   </property>
+  </action>
+  <action name="action_Quick_Connect" >
+   <property name="icon" >
+    <iconset resource="../icons.qrc" >
+     <normaloff>:/icons/add.png</normaloff>:/icons/add.png</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Quick Connect...</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Shift+Q</string>
+   </property>
+  </action>
+  <action name="action_Preferences" >
+   <property name="text" >
+    <string>&amp;Preferences...</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionCopy" >
+   <property name="icon" >
+    <iconset resource="../icons.qrc" >
+     <normaloff>:/icons/page_copy.png</normaloff>:/icons/page_copy.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Copy</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="action_Paste" >
+   <property name="icon" >
+    <iconset resource="../icons.qrc" >
+     <normaloff>:/icons/page_paste.png</normaloff>:/icons/page_paste.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Paste</string>
+   </property>
+   <property name="shortcut" >
+    <string>Shift+Ins</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../icons.qrc" />
+ </resources>
+ <connections/>
+</ui>

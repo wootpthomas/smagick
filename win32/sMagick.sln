@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sMagick", "..\sMagick.vcproj", "{6B5B15E4-E49B-4D67-A6BD-DBBA5A64E5F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D00BE25-7B5D-4DB6-BF93-32A6B012129E} = {6D00BE25-7B5D-4DB6-BF93-32A6B012129E}
+		{A4D42ADC-66AF-4FB7-B9BF-8A7ABACCE189} = {A4D42ADC-66AF-4FB7-B9BF-8A7ABACCE189}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libssh2_dll", "..\..\3rdParty\libssh2\win32\libssh2_dll.vcproj", "{A4D42ADC-66AF-4FB7-B9BF-8A7ABACCE189}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "autoBuild", "autoBuild\autoBuild.vcproj", "{6D00BE25-7B5D-4DB6-BF93-32A6B012129E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "sMagick Install", "sMagick Install\sMagick Install.vdproj", "{EF41ADA1-02FB-45B0-B297-BB265AC22A68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B5B15E4-E49B-4D67-A6BD-DBBA5A64E5F2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B5B15E4-E49B-4D67-A6BD-DBBA5A64E5F2}.Debug|Win32.Build.0 = Debug|Win32
+		{6B5B15E4-E49B-4D67-A6BD-DBBA5A64E5F2}.Release|Win32.ActiveCfg = Release|Win32
+		{6B5B15E4-E49B-4D67-A6BD-DBBA5A64E5F2}.Release|Win32.Build.0 = Release|Win32
+		{A4D42ADC-66AF-4FB7-B9BF-8A7ABACCE189}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A4D42ADC-66AF-4FB7-B9BF-8A7ABACCE189}.Debug|Win32.Build.0 = Debug|Win32
+		{A4D42ADC-66AF-4FB7-B9BF-8A7ABACCE189}.Release|Win32.ActiveCfg = Release|Win32
+		{A4D42ADC-66AF-4FB7-B9BF-8A7ABACCE189}.Release|Win32.Build.0 = Release|Win32
+		{6D00BE25-7B5D-4DB6-BF93-32A6B012129E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6D00BE25-7B5D-4DB6-BF93-32A6B012129E}.Debug|Win32.Build.0 = Debug|Win32
+		{6D00BE25-7B5D-4DB6-BF93-32A6B012129E}.Release|Win32.ActiveCfg = Release|Win32
+		{6D00BE25-7B5D-4DB6-BF93-32A6B012129E}.Release|Win32.Build.0 = Release|Win32
+		{EF41ADA1-02FB-45B0-B297-BB265AC22A68}.Debug|Win32.ActiveCfg = Debug
+		{EF41ADA1-02FB-45B0-B297-BB265AC22A68}.Release|Win32.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
